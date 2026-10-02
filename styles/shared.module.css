@@ -1,0 +1,49 @@
+/* Shared section primitives */
+.section { padding: var(--section-top) var(--page-x) 0; }
+
+.eyebrow {
+  font-size: 13px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--color-accent-700);
+}
+.eyebrowMuted { composes: eyebrow; color: var(--color-neutral-700); }
+
+.metaLabel {
+  font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--color-neutral-700);
+}
+
+.sectionTitle {
+  font-size: clamp(32px, 4.2vw, 60px); letter-spacing: -0.03em;
+  line-height: 1; margin: 12px 0 0;
+}
+.statement {
+  font-size: clamp(28px, 3.4vw, 48px); letter-spacing: -0.03em;
+  line-height: 1.02; margin: 0; text-wrap: pretty;
+}
+
+/* Header row: eyebrow + title left, controls right */
+.headerRow {
+  display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end;
+  justify-content: space-between; margin-bottom: 32px;
+}
+
+/* Label 1fr / content 4fr two-column block */
+.split { display: flex; flex-wrap: wrap; gap: 32px 64px; }
+.splitRuled { composes: split; border-top: 2px solid var(--color-divider); padding-top: 16px; }
+.splitLabel { flex: 1 1 200px; }
+.splitContent { flex: 4 1 520px; min-width: 0; }
+
+/* Visible 2px grid lines: gap over divider bg + divider border */
+.gridLines {
+  display: grid; gap: 2px;
+  background: var(--color-divider);
+  border: 2px solid var(--color-divider);
+}
+
+.pulseDot {
+  width: 8px; height: 8px; flex: none; display: inline-block;
+  background: var(--color-accent);
+  animation: kpulse 1.6s ease-out infinite;
+}
+
+.body { font-size: 17px; line-height: 1.6; text-wrap: pretty; }

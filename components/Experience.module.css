@@ -1,0 +1,45 @@
+.intro { display: flex; flex-direction: column; gap: 12px; }
+.ongoing {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+}
+.role { line-height: 1; }
+.team { color: var(--color-neutral-700); }
+.lead { max-width: 720px; margin: 12px 0 0; }
+
+.scripts { margin: 40px 0 0; padding: 0; list-style: none; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.script {
+  background: var(--color-bg); padding: 20px;
+  display: flex; flex-direction: column; gap: 10px; min-height: 170px;
+  transition: background .25s;
+}
+.script:hover { background: var(--color-accent-100); }
+.scriptNo { font-size: 12px; font-weight: 600; color: var(--color-accent-700); font-variant-numeric: tabular-nums; }
+.scriptName { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; }
+.scriptDesc { font-size: 14px; line-height: 1.5; color: var(--color-neutral-800); }
+
+.education { margin-top: 72px; }
+.certs { margin-top: 56px; }
+.list { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
+
+.eduRow {
+  display: grid; grid-template-columns: minmax(110px, 160px) minmax(0, 1fr);
+  gap: 16px 24px; padding: 18px 0; border-top: 2px solid var(--color-divider);
+}
+.years { font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.school { display: flex; flex-direction: column; gap: 2px; }
+.schoolName { font-size: 20px; font-weight: 800; letter-spacing: -0.015em; }
+.detail { color: var(--color-neutral-700); }
+
+.certTable { font-size: 15px; }
+.certHead {
+  display: flex; justify-content: space-between; gap: 16px; padding: 8px 0;
+  border-bottom: 2px solid var(--color-divider);
+  font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--color-neutral-700);
+}
+.certRow {
+  display: flex; justify-content: space-between; gap: 16px; padding: 12px 0;
+  border-bottom: 1px solid var(--color-divider);
+}
+.certName { font-weight: 600; }
+.certDate { white-space: nowrap; color: var(--color-neutral-700); }

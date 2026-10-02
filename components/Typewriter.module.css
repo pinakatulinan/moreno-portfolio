@@ -1,0 +1,7 @@
+.typed { color: var(--color-accent-700); }
+.caret {
+  display: inline-block; width: .08em; height: .95em;
+  margin-left: .06em; vertical-align: -0.12em;
+  background: var(--color-accent);
+  animation: kblink 1s steps(1) infinite;
+}

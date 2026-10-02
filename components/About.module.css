@@ -1,0 +1,13 @@
+.content { display: flex; flex-direction: column; gap: 40px; }
+.hl { color: var(--color-accent); }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; }
+.copy p { margin: 0 0 1em; }
+.facts { display: flex; flex-direction: column; margin: 0; }
+.fact {
+  display: flex; justify-content: space-between; gap: 16px;
+  padding: 12px 0; border-top: 1px solid var(--color-divider);
+}
+.fact:first-child { border-top-width: 2px; }
+.fact:last-child { border-bottom: 2px solid var(--color-divider); }
+.fact dt { color: var(--color-neutral-700); }
+.fact dd { margin: 0; font-weight: 600; text-align: right; }

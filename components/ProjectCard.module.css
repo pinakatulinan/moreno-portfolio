@@ -1,0 +1,26 @@
+.card {
+  min-height: 380px; padding: 24px;
+  background: var(--color-bg);
+  display: flex; flex-direction: column; gap: 16px;
+  cursor: pointer;
+  transition: background .35s var(--ease);
+  animation: krise .5s var(--ease) both;
+}
+.card:hover { background: var(--color-accent); }
+
+.top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.kicker { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.arrow { display: flex; transition: transform .35s var(--ease); }
+.card:hover .arrow { transform: rotate(45deg); }
+
+.number {
+  font-size: clamp(72px, 8vw, 120px); font-weight: 800; line-height: .85;
+  letter-spacing: -0.05em; color: var(--color-neutral-300);
+  transition: color .35s;
+}
+.card:hover .number { color: var(--color-bg); }
+
+.bottom { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
+.title { font-size: clamp(26px, 2.4vw, 34px); letter-spacing: -0.025em; margin: 0; }
+.short { margin: 0; font-size: 15px; line-height: 1.5; text-wrap: pretty; }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }

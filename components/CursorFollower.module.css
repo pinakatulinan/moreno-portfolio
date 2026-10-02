@@ -1,0 +1,14 @@
+.cursor {
+  position: fixed; left: 0; top: 0; z-index: 2000;
+  width: 14px; height: 14px;
+  background: var(--color-accent);
+  pointer-events: none; opacity: 0;
+  display: flex; align-items: center; justify-content: center;
+  transition: width .28s var(--ease), height .28s var(--ease), opacity .2s;
+  will-change: transform;
+}
+.label {
+  font-size: 13px; font-weight: 800; color: var(--color-bg);
+  opacity: 0; transition: opacity .2s; white-space: nowrap;
+}
+@media (pointer: coarse), (pointer: none) { .cursor { display: none; } }
