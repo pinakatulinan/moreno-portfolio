@@ -56,20 +56,41 @@ export default function Experience() {
         <h3 className={`${shared.splitLabel} ${shared.eyebrowMuted}`} style={{ margin: 0 }}>
           Certifications
         </h3>
-        <div className={`${shared.splitContent} ${s.certTable}`}>
-          <div className={s.certHead} aria-hidden="true">
-            <span>Certification</span>
-            <span>Date</span>
-          </div>
-          <ul className={s.list}>
-            {CERTS.map((c) => (
-              <li key={c.name} className={s.certRow}>
+        <ul className={`${shared.splitContent} ${s.certGrid}`}>
+          {CERTS.map((c) => (
+            <li key={c.name} className={s.cert}>
+              {c.image ? (
+                <a
+                  href={c.image}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={s.certThumb}
+                  data-cursor="link"
+                  aria-label={`View ${c.name} certificate`}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={c.image} alt={`${c.name} certificate`} loading="lazy" />
+                </a>
+              ) : (
+                <div className={`${s.certThumb} ${s.certEmpty}`} aria-hidden="true">
+                  Certificate
+                </div>
+              )}
+              <div className={s.certMeta}>
                 <span className={s.certName}>{c.name}</span>
-                <span className={s.certDate}>{c.date}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+                <span className={s.certIssuer}>{c.issuer}</span>
+                <span className={s.certFoot}>
+                  <span className={s.certDate}>{c.date}</span>
+                  {c.verify && (
+                    <a href={c.verify} target="_blank" rel="noopener noreferrer" className={s.certVerify} data-cursor="link">
+                      Verify ↗
+                    </a>
+                  )}
+                </span>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

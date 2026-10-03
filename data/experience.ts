@@ -1,6 +1,6 @@
 export interface Script { no: string; name: string; desc: string }
 export interface Education { years: string; school: string; detail: string }
-export interface Cert { name: string; date: string }
+export interface Cert { name: string; issuer: string; date: string; image?: string; verify?: string }
 
 export const SCRIPTS: Script[] = (
   [
@@ -19,10 +19,12 @@ export const EDUCATION: Education[] = [
 ];
 
 export const CERTS: Cert[] = [
-  { name: "AWS Academy Foundation & Architecting", date: "Sep – Oct 2025" },
-  { name: "Proweaver Hackathon 2025", date: "2025" },
-  { name: "Information Management 2 — MySQL (CodeChum)", date: "Nov 12, 2024" },
-  { name: "Data Visualization", date: "Sep 19, 2024" },
-  { name: "C Programming", date: "May 12, 2024" },
-  { name: "HTML", date: "Feb 11, 2024" },
+  { name: "OWASP Top 10", issuer: "Snyk", date: "Sep 15, 2026", image: "/certs/owasp-top-10.png" },
+  { name: "AWS Academy Graduate — Cloud Architecting", issuer: "AWS Academy · 60 hours", date: "Oct 13, 2025", image: "/certs/aws-cloud-architecting.png", verify: "https://www.credly.com/go/OlquBJkD" },
+  { name: "AWS Academy Graduate — Cloud Foundations", issuer: "AWS Academy · 20 hours", date: "Sep 4, 2025", image: "/certs/aws-cloud-foundations.png", verify: "https://www.credly.com/go/UTGLXGir" },
+  { name: "Proweaver PromptQuest Hackathon", issuer: "Proweaver, Inc. · Participation", date: "Sep 19, 2025", image: "/certs/proweaver-hackathon.png" },
+  { name: "Information Management 2 — MySQL", issuer: "CodeChum", date: "Nov 13, 2024", image: "/certs/mysql-codechum.png", verify: "https://citu.codechum.com/certificates/3565" },
+  { name: "Data Visualization", issuer: "Kaggle", date: "Sep 19, 2024", image: "/certs/data-visualization.png" },
+  { name: "C Programming", issuer: "", date: "May 12, 2024" },
+  { name: "Introduction to HTML", issuer: "Sololearn", date: "Feb 11, 2024", image: "/certs/html.jpg" },
 ];
