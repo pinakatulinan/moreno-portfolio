@@ -1,4 +1,4 @@
-export type ProjectCategory = "Web" | "Mobile" | "AI";
+export type ProjectCategory = "Web" | "Mobile" | "AI" | "Automation";
 export type Filter = "All" | ProjectCategory;
 
 export interface Project {
@@ -13,7 +13,7 @@ export interface Project {
   desc: string;
   stack: string[];
   role: string;
-  github: string;
+  github?: string;
 }
 
 const RAW: Omit<Project, "no">[] = [
@@ -95,11 +95,23 @@ const RAW: Omit<Project, "no">[] = [
     role: "Full-stack Developer",
     github: "https://github.com/kinatulinan/ProjectUkay",
   },
+  {
+    id: "clearance",
+    kicker: "ServiceNow course",
+    title: "Barangay Clearance Services",
+    cats: ["Automation"],
+    platform: "ServiceNow",
+    status: "Completed",
+    short: "Automated barangay clearance requests, approval and email delivery.",
+    desc: "A project applying the skills from our ServiceNow course subject: requesting and getting a barangay clearance. A request from the user triggers an automated flow, and once the barangay approves it, an email is sent automatically so the user can receive the clearance they requested.",
+    stack: ["ServiceNow Automation"],
+    role: "Developer",
+  },
 ];
 
 export const PROJECTS: Project[] = RAW.map((p, i) => ({ ...p, no: String(i + 1).padStart(2, "0") }));
 
-export const FILTERS: Filter[] = ["All", "Web", "Mobile", "AI"];
+export const FILTERS: Filter[] = ["All", "Web", "Mobile", "AI", "Automation"];
 
 export const countFor = (f: Filter): string =>
   String(f === "All" ? PROJECTS.length : PROJECTS.filter((p) => p.cats.includes(f)).length).padStart(2, "0");

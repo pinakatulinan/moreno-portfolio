@@ -1,5 +1,0 @@
-.filters { display: flex; gap: 6px; flex-wrap: wrap; }
-.filter { padding: 10px 14px; gap: 10px; }
-.count { font-weight: 400; opacity: .75; font-variant-numeric: tabular-nums; }
-
-.grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }

@@ -13,7 +13,7 @@ export const SCRIPTS: Script[] = (
 ).map(([name, desc], i) => ({ name, desc, no: String(i + 1).padStart(2, "0") }));
 
 export const EDUCATION: Education[] = [
-  { years: "2022 — 2027", school: "Cebu Institute of Technology – University", detail: "BS Information Technology" },
+  { years: "2022 — 2027", school: "Cebu Institute of Technology – University", detail: "BS Information Technology · in progress" },
   { years: "2020 — 2021", school: "Cebu Aeronautical Technical School", detail: "BS Aircraft Maintenance Technology — first year" },
   { years: "2009 — 2020", school: "Saint Cecilia's College", detail: "Elementary, High School and Senior High School" },
 ];

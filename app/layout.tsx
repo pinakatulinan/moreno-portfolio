@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/data/site";
+import { THEME_INIT_SCRIPT } from "@/data/theme";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -27,7 +28,10 @@ export const viewport: Viewport = { themeColor: "#f3f2f2" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={archivo.variable}>
+    <html lang="en" className={archivo.variable} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body>{children}</body>
     </html>
   );
