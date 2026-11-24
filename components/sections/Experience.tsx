@@ -4,13 +4,14 @@ import { useState } from "react";
 import PulseDot from "./PulseDot";
 import { SCRIPTS } from "@/data/experience";
 import s from "./sections.module.css";
+import Eyebrow from "./Eyebrow";
 
 export default function Experience() {
   const [sel, setSel] = useState(0);
   const script = SCRIPTS[sel];
   return (
     <div className={s.stack} style={{ gap: 28 }}>
-      <div data-st="" className={s.eyebrow}>04 / 08 — Experience</div>
+      <Eyebrow id="experience" st />
       <div data-st="" className={s.stack} style={{ gap: 12 }}>
         <div className={s.ongoing}><PulseDot /> Ongoing · 500–600 hours</div>
         <h1 className={s.expH1}>

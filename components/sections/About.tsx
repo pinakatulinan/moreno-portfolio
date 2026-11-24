@@ -1,10 +1,11 @@
 import { FACTS } from "@/data/sections";
 import s from "./sections.module.css";
+import Eyebrow from "./Eyebrow";
 
 export default function About() {
   return (
     <div className={s.stack} style={{ gap: 36 }}>
-      <div data-st="" className={s.eyebrow}>03 / 08 — About</div>
+      <Eyebrow id="about" st />
       <h1 data-st="" className={s.aboutH1}>
         There are millions of solutions to one problem. I look for the one that takes{" "}
         <span className={s.accent}>less time</span> and makes the <span className={s.accent}>bigger impact</span>.

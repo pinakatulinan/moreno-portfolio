@@ -1,12 +1,13 @@
 import { ArrowUpRight } from "lucide-react";
 import { CERTS, EDUCATION } from "@/data/experience";
 import s from "./sections.module.css";
+import Eyebrow from "./Eyebrow";
 
 export default function Education() {
   return (
     <div className={s.stack} style={{ gap: 28 }}>
       <div data-st="" className={s.headCol}>
-        <div className={s.eyebrow}>06 / 08 — Education &amp; certs</div>
+        <Eyebrow id="education" />
         <h1 className={s.h1}>Always learning.</h1>
       </div>
       <div data-st="" className={s.stack}>
