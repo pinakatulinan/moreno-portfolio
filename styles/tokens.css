@@ -1,48 +1,56 @@
-/* Modernist tokens + component classes — copied verbatim from _ds/modernist/styles.css (font loaded via next/font). */
+/* 和 Wa — Japanese design tokens + component classes (fonts loaded via next/font). */
 
 :root {
-  --color-bg: #f3f2f2;
-  --color-surface: #eae9e9;
-  --color-text: #201e1d;
-  --color-accent: #ec3013;
-  --color-accent-2: #e15b47;
-  --color-divider: color-mix(in srgb, #201e1d 40%, transparent);
+  /* 和 — Japanese palette: washi paper, sumi ink, shu (vermilion) and kin (gold). */
+  --color-bg: #f2ece1;
+  --color-surface: #e9e1d2;
+  --color-text: #1d1a16;
+  --color-accent: #c73a2b;
+  --color-accent-2: #b0853a;
+  --color-divider: color-mix(in srgb, #1d1a16 28%, transparent);
 
-  /* Tonal ramps — generated in OKLCH on one shared lightness scale, so the
-     same step of any role matches the others in visual value. */
-  --color-neutral-100: #f8f4f4;
-  --color-neutral-200: #eae7e7;
-  --color-neutral-300: #d7d3d3;
-  --color-neutral-400: #bab6b6;
-  --color-neutral-500: #9b9797;
-  --color-neutral-600: #7d7979;
-  --color-neutral-700: #605d5d;
-  --color-neutral-800: #444141;
-  --color-neutral-900: #2d2b2b;
+  --color-neutral-100: #f7f2e8;
+  --color-neutral-200: #ebe4d6;
+  --color-neutral-300: #d8cfbe;
+  --color-neutral-400: #bbb19f;
+  --color-neutral-500: #9b917f;
+  --color-neutral-600: #7c7363;
+  --color-neutral-700: #5e574b;
+  --color-neutral-800: #433e35;
+  --color-neutral-900: #2b2722;
 
-  --color-accent-100: #fff2ef;
-  --color-accent-200: #ffe0d9;
-  --color-accent-300: #ffc4b8;
-  --color-accent-400: #ff9783;
-  --color-accent-500: #ff563c;
-  --color-accent-600: #dd2b0f;
-  --color-accent-700: #ae1800;
-  --color-accent-800: #7c1405;
-  --color-accent-900: #4d170e;
+  --color-accent-100: #f8e6e0;
+  --color-accent-200: #f2cfc5;
+  --color-accent-300: #e8a698;
+  --color-accent-400: #db7865;
+  --color-accent-500: #d0503e;
+  --color-accent-600: #b5301f;
+  --color-accent-700: #962515;
+  --color-accent-800: #6e1c11;
+  --color-accent-900: #45140c;
 
-  --color-accent-2-100: #fff2ef;
-  --color-accent-2-200: #ffe0da;
-  --color-accent-2-300: #ffc4b9;
-  --color-accent-2-400: #ff9784;
-  --color-accent-2-500: #ef6853;
-  --color-accent-2-600: #c94b39;
-  --color-accent-2-700: #9e3526;
-  --color-accent-2-800: #71261b;
-  --color-accent-2-900: #471d16;
+  --color-accent-2-100: #f6eedc;
+  --color-accent-2-200: #ecdcb6;
+  --color-accent-2-300: #dcc187;
+  --color-accent-2-400: #c9a25c;
+  --color-accent-2-500: #b0853a;
+  --color-accent-2-600: #8f6a2a;
+  --color-accent-2-700: #6e511f;
+  --color-accent-2-800: #4e3916;
+  --color-accent-2-900: #30230e;
 
-  --font-heading: var(--font-archivo), "Archivo", system-ui, sans-serif;
-  --font-heading-weight: 800;
-  --font-body: var(--font-archivo), "Archivo", system-ui, sans-serif;
+  /* Scene colours used by the hero, petals and shoji doors */
+  --sun: #c73a2b;
+  --sun-glow: color-mix(in srgb, #c73a2b 30%, transparent);
+  --ink: #1d1a16;
+  --petal: #e9a7b4;
+  --petal-2: #f4c9d1;
+  --shoji-paper: #f6f1e6;
+  --shoji-wood: #3a2c20;
+
+  --font-heading: var(--font-mincho), "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --font-heading-weight: 700;
+  --font-body: var(--font-gothic), "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
 
   --space-1: 4.0px;
   --space-2: 8.0px;
@@ -55,11 +63,9 @@
   --radius-md: 0px;
   --radius-lg: 0px;
 
-  /* Elevation — derived from the ground: soft ink-tinted shadows on a
-     light theme, a hairline edge + ambient darkness on a dark one. */
-  --shadow-sm: 0 1px 2px color-mix(in srgb, #2d2b2b 14%, transparent);
-  --shadow-md: 0 3px 10px color-mix(in srgb, #2d2b2b 16%, transparent);
-  --shadow-lg: 0 12px 32px color-mix(in srgb, #2d2b2b 22%, transparent);
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #2b2722 14%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, #2b2722 16%, transparent);
+  --shadow-lg: 0 12px 32px color-mix(in srgb, #2b2722 22%, transparent);
 }
 
 body {
@@ -81,7 +87,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--font-headi
 body { margin: 0; font-size: 15px; line-height: 1.55; font-weight: 400; }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading); font-weight: var(--font-heading-weight);
-  line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 var(--space-2);
+  line-height: 1.12; letter-spacing: -0.01em; margin: 0 0 var(--space-2);
 }
 h1 { font-size: 42px; }
 h2 { font-size: 32px; }

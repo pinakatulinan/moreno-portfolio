@@ -4,6 +4,8 @@ import { useState } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { countFor, FILTERS, PROJECTS, type Filter } from "@/data/projects";
 import s from "./sections.module.css";
+import Eyebrow from "./Eyebrow";
+import Seigaiha from "../japan/Seigaiha";
 
 interface Props { project: string | null; setProject: (id: string | null) => void }
 
@@ -28,6 +30,7 @@ export default function Projects({ project, setProject }: Props) {
           </div>
         </div>
         <div data-st="" className={s.hero}>
+          <Seigaiha bg="var(--color-accent)" line="color-mix(in srgb, var(--km-on-accent-hi) 14%, transparent)" className={s.waves} />
           <div className={s.heroTop}><span>{cur.kicker}</span><span>{cur.status}</span></div>
           <h1 className={s.heroTitle}>{cur.title}</h1>
         </div>
@@ -64,7 +67,7 @@ export default function Projects({ project, setProject }: Props) {
     <div className={s.stack} style={{ gap: 28 }}>
       <div data-st="" className={s.headRow}>
         <div className={s.headCol}>
-          <div className={s.eyebrow}>02 / 08 — Projects</div>
+          <Eyebrow id="projects" />
           <h1 className={s.h1}>Things I&apos;ve shipped.</h1>
         </div>
         <div className={s.filters} role="group" aria-label="Filter projects">

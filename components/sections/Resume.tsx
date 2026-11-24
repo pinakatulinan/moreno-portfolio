@@ -1,13 +1,14 @@
 import { ArrowUpRight, Download } from "lucide-react";
 import { SITE } from "@/data/site";
 import s from "./sections.module.css";
+import Eyebrow from "./Eyebrow";
 
 export default function Resume() {
   return (
     <div className={s.stack} style={{ gap: 24 }}>
       <div data-st="" className={s.headRow}>
         <div className={s.headCol}>
-          <div className={s.eyebrow}>08 / 08 — Résumé</div>
+          <Eyebrow id="resume" />
           <h1 className={s.h1}>Moreno's Resume.</h1>
         </div>
         <div className={s.btnRow}>
